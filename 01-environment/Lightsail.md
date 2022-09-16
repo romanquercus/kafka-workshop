@@ -19,7 +19,7 @@ Scroll down to **Launch script** and add the following script
 
 ```
 export GITHUB_PROJECT=kafka-workshop
-export GITHUB_OWNER=gschmutz
+export GITHUB_OWNER=romanquercus
 export DATAPLATFORM_HOME=01-environment/docker
 export DOCKER_COMPOSE_VERSION=1.25.3
 export PLATYS_VERSION=2.4.0
