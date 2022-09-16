@@ -39,6 +39,27 @@ services:
     volumes:
       - ./data-transfer:/data-transfer
     restart: unless-stopped
+  #  ================================== InfluxData Chronograf ========================================== #
+  chronograf:
+    image: chronograf:1.9
+    hostname: chronograf
+    container_name: chronograf
+    labels:
+      com.platys.name: chronograf
+      com.platys.webui.title: Chronograf UI
+      com.platys.webui.url: http://${PUBLIC_IP}:28129
+    depends_on:
+      - influxdb
+    ports:
+      - 28129:8888
+    environment:
+      RESOURCES_PATH: /usr/share/chronograf/resources
+      PORT: 8888
+      HOST: chronograf
+      INFLUXDB_URL: http://influxdb:8086
+    volumes:
+      - ./data-transfer:/data-transfer
+    restart: unless-stopped
   #  ================================== InfluxData Kapacitor ========================================== #
   kapacitor:
     image: kapacitor:1.5

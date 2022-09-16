@@ -215,7 +215,7 @@
       INFLUXDB_enable: true
       INFLUXDB_volume_map_data: false
       INFLUXDB_TELEGRAF_enable: true
-      INFLUXDB_CHRONOGRAF_enable: false
+      INFLUXDB_CHRONOGRAF_enable: true
       INFLUXDB_CHRONOGRAF_volume_map_data: false
       INFLUXDB_KAPACITOR_enable: true
       INFLUXDB_KAPACITOR_volume_map_data: false
